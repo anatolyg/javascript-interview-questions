@@ -38,3 +38,21 @@ var corpus = "The ship drew on and had safely passed the strait, which some volc
 // 3. show words in alphabetical order and reverse alphabetical order, with word frequency, based on a radio button in index.html
 // 4. ensure that browser does not block when calculating these frequencies
 
+
+// #3
+//
+// the key here is to allow for async, non-blocking processing while executing the callback only once, only once ALL async calls have completed.
+// 
+// Execute all of the following using JSONP with Jquery (or whatever you wish)
+
+// 1. do a search on google for "twitter patients" (https://www.google.com/search?q=twitter+patients&safe=off)
+// 2. for the first 10 of these, retrieve the twitter profile bio from their public profile page (twitter.com/{{handle}})
+// 	a. the element to get is ".bio.profile-field"
+// 3. as you get each of these, add them to the page, into a table with the following structure:
+// 	<th>twitter handle</th>
+// 	<th>twitter link</th>
+// 	<th>twitter bio</th>
+// 4. after all of these are retrieved and displayed, call a function into which you pass in the following data structure (JSON):
+// 	a. make sure that the call contains data for all 10 twitter calls.
+// 	[{handle: 'twitter handle', link: 'twitter link', bio: 'twitter bio'}, ...]
+// 5. ensure that the last call is only called once, and only once all info has been both retrieved and output to the page.
